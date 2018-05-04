@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,48 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Time_tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8V-6B-iGd">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Egg Timer" id="s7H-Jp-2Rg">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="S5q-cM-c6O"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="I6a-S7-Qtq"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HaQ-Zj-rBV">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="-10" id="7AO-Hf-YRd"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="7MQ-TA-jY7"/>
+                                    <barButtonItem title="Reset" id="bUE-uG-45V"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="oL6-AU-qk4"/>
+                                    <barButtonItem title="+10" id="rhy-Lj-XdB"/>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYO-V4-7VN" userLabel="Time text">
+                                <rect key="frame" x="146" y="303" width="82" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HaQ-Zj-rBV" secondAttribute="bottom" id="Eeo-hn-i6M"/>
+                            <constraint firstItem="E8V-6B-iGd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GoH-Vs-3j8"/>
+                            <constraint firstItem="E8V-6B-iGd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KeX-aF-ims"/>
+                            <constraint firstItem="bYO-V4-7VN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hTx-jS-8sd"/>
+                            <constraint firstItem="HaQ-Zj-rBV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lYi-u1-W99"/>
+                            <constraint firstItem="E8V-6B-iGd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ot3-JQ-F9G"/>
+                            <constraint firstItem="bYO-V4-7VN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sGk-ik-IDa"/>
+                            <constraint firstItem="HaQ-Zj-rBV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w72-qi-UGo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
