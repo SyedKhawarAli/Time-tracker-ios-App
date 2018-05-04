@@ -8,7 +8,7 @@ An application which help to mange your time for any task that has a time limit.
 
 ## Built With
 
-* [Xcode](https://developer.apple.com/xcode/) - used 
+* [Xcode](https://developer.apple.com/xcode/) - IDE used 
 * [Swift](https://swift.org/) - Language used
 
 ## Credits
